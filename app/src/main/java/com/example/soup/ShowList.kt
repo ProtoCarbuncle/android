@@ -35,10 +35,10 @@ class ShowList : Fragment() {
         view.findViewById<RecyclerView>(R.id.shows_list).apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = ListAdapter(showList, object : OnItemClickListener {
-                override fun onItemClicked(show: Show) {
+                override fun onItemClicked(showData: ShowData) {
                     // TODO
                      findNavController().navigate(
-                        ShowListDirections.actionShowListToShowDetail(show = show)
+                        ShowListDirections.actionShowListToShowDetail(show = showData)
                      )
                 }
             })
@@ -46,7 +46,7 @@ class ShowList : Fragment() {
     }
 }
 
-class ListAdapter(private val data: List<Show>, val listener: OnItemClickListener) :
+class ListAdapter(private val data: List<ShowData>, val listener: OnItemClickListener) :
     RecyclerView.Adapter<ListItem>() {
 
     override fun getItemCount(): Int {
@@ -78,17 +78,17 @@ class ListItem(v: View) : RecyclerView.ViewHolder(v) {
     val date: TextView = v.findViewById(R.id.item_date)
     val image: ImageView = v.findViewById(R.id.item_image)
 
-    fun bindItem(show: Show, ranking: Int) {
+    fun bindItem(showData: ShowData, ranking: Int) {
         this.ranking.text = "#$ranking"
-        title.text = show.title
-        episodes.text = "${show.episodes.size} épisodes"
-        producer.text = show.producer
-        date.text = show.year.toString()
+        title.text = showData.title
+        episodes.text = "${showData.episodes.size} épisodes"
+        producer.text = showData.producer
+        date.text = showData.year.toString()
 
-        Glide.with(itemView).load(show.pictureUrl).into(image)
+        Glide.with(itemView).load(showData.pictureUrl).into(image)
     }
 }
 
 interface OnItemClickListener {
-    fun onItemClicked(show: Show)
+    fun onItemClicked(showData: ShowData)
 }

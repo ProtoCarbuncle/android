@@ -1,11 +1,8 @@
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-import java.util.Date
 
 @Parcelize
-data class Episode(
-    val picture: String,
+data class CharacterData(
     val name: String,
-    val number: Int,
-    val date: Date
+    val picture: String
 ) : Parcelable

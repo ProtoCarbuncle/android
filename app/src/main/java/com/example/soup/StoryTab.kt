@@ -1,6 +1,6 @@
 package com.example.soup
 
-import Show
+import ShowData
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-class StoryTab(val show: Show): Fragment() {
+class StoryTab(val showData: ShowData): Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,7 +23,7 @@ class StoryTab(val show: Show): Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<TextView>(R.id.show_story).text = show.story
+        view.findViewById<TextView>(R.id.show_story).text = showData.story
     }
 
 }

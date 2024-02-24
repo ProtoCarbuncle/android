@@ -18,6 +18,6 @@
         android:label="ShowDetail" >
         <argument
             android:name="show"
-            app:argType="Show" />
+            app:argType="ShowData" />
     </fragment>
 </navigation>

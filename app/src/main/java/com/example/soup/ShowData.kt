@@ -2,10 +2,10 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Show(
+data class ShowData(
     val story: String,
-    val episodes: List<Episode>,
-    val characters: List<Character>,
+    val episodes: List<EpisodeData>,
+    val characterData: List<CharacterData>,
     val year: Int,
     val pictureUrl: String,
     val producer: String,
