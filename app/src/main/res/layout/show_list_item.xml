@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="21dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="@color/card_background_color"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_ranking"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="7dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:text="#1"
+            android:gravity="center"
+            android:background="@drawable/position_indicator"/>
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="128dp"
+            android:layout_height="131dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/item_image"
+            app:layout_constraintStart_toEndOf="@id/item_image"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="11.14dp"
+            android:text="Marvel agent of SHIELD"
+        />
+
+        <ImageView
+            android:id="@+id/publisher_icon"
+            android:layout_width="15dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_publisher_bicolor"
+            app:layout_constraintStart_toEndOf="@id/item_image"
+            android:layout_marginStart="12.14dp"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            android:layout_marginTop="23dp"
+            app:tint="@color/icon_foreground_color"
+        />
+
+        <TextView
+            android:id="@+id/item_producer"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toEndOf="@id/publisher_icon"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/publisher_icon"
+            app:layout_constraintBottom_toBottomOf="@id/publisher_icon"
+            android:textSize="12sp"
+            android:text="Marvel"
+        />
+
+
+        <ImageView
+            android:id="@+id/episodes_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_tv_bicolor"
+            app:layout_constraintStart_toEndOf="@id/item_image"
+            android:layout_marginStart="12.14dp"
+            app:layout_constraintTop_toBottomOf="@id/publisher_icon"
+            android:layout_marginTop="9dp"
+            app:tint="@color/icon_foreground_color"
+        />
+
+        <TextView
+            android:id="@+id/item_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toEndOf="@id/episodes_icon"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/episodes_icon"
+            app:layout_constraintBottom_toBottomOf="@id/episodes_icon"
+            android:textSize="12sp"
+            android:text="136 episodes"
+        />
+
+
+
+        <ImageView
+            android:id="@+id/calendar_icon"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_calendar_bicolor"
+            app:layout_constraintStart_toEndOf="@id/item_image"
+            android:layout_marginStart="12.14dp"
+            app:layout_constraintTop_toBottomOf="@id/episodes_icon"
+            android:layout_marginTop="11.75dp"
+            app:tint="@color/icon_foreground_color"
+        />
+
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toEndOf="@id/calendar_icon"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/calendar_icon"
+            app:layout_constraintBottom_toBottomOf="@id/calendar_icon"
+            android:textSize="12dp"
+            android:text="Mai 1970"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
