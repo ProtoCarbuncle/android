@@ -1,4 +1,4 @@
-package com.example.myapplication.R
+package com.example.soup.R
 
 import android.os.Bundle
 import android.view.LayoutInflater

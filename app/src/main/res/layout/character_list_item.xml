@@ -30,7 +30,7 @@
         android:textSize="17sp"
         android:textColor="@color/black"
 
-/>
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
